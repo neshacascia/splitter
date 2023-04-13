@@ -13,6 +13,7 @@ module.exports = {
         heading: '#5E7A7D',
         icon: '#9EBBBD',
         custom: '#547878',
+        hoverBtn: '#9FE8DF',
       },
       fontFamily: {
         body: ['Space Mono'],

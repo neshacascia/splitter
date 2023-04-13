@@ -10,6 +10,11 @@
   width: 100%;
 }
 
+#billAmount::placeholder,
 #numOfPeople::placeholder {
   color: #9ebbbd;
+}
+
+button:disabled {
+  background: #0d686d;
 }

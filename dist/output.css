@@ -2466,12 +2466,17 @@ video {
   width: 100%;
 }
 
-#numOfPeople::-moz-placeholder {
+#billAmount::-moz-placeholder, #numOfPeople::-moz-placeholder {
   color: #9ebbbd;
 }
 
+#billAmount::placeholder,
 #numOfPeople::placeholder {
   color: #9ebbbd;
+}
+
+button:disabled {
+  background: #0d686d;
 }
 
 @media (min-width: 640px){
@@ -2510,8 +2515,18 @@ video {
   }
 }
 
+.hover\:bg-hoverBtn:hover{
+  --tw-bg-opacity: 1;
+  background-color: rgb(159 232 223 / var(--tw-bg-opacity));
+}
+
 .hover\:font-bold:hover{
   font-weight: 700;
+}
+
+.hover\:text-darkGreen:hover{
+  --tw-text-opacity: 1;
+  color: rgb(0 71 75 / var(--tw-text-opacity));
 }
 
 .before\:hover\:text-center:hover::before{
@@ -2522,6 +2537,16 @@ video {
 .hover\:before\:text-center:hover::before{
   content: var(--tw-content);
   text-align: center;
+}
+
+.focus\:bg-blueGreen:focus{
+  --tw-bg-opacity: 1;
+  background-color: rgb(38 194 174 / var(--tw-bg-opacity));
+}
+
+.focus\:text-darkGreen:focus{
+  --tw-text-opacity: 1;
+  color: rgb(0 71 75 / var(--tw-text-opacity));
 }
 
 .focus\:hover\:text-center:hover:focus{

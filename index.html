@@ -38,6 +38,7 @@
               type="number"
               required
               id="billAmount"
+              placeholder="0"
               class="text-darkGreen bg-lightGreen text-2xl text-right w-full py-[6px] px-5"
             />
           </div>
@@ -48,31 +49,31 @@
           <div class="grid grid-cols-2 gap-4 md:grid-cols-3">
             <button
               value="0.05"
-              class="text-white bg-darkGreen text-2xl rounded-md py-[6px] tipBtns"
+              class="text-white bg-darkGreen text-2xl rounded-md py-[6px] hover:bg-hoverBtn hover:text-darkGreen focus:bg-blueGreen focus:text-darkGreen tipBtns"
             >
               5%
             </button>
             <button
               value="0.10"
-              class="text-white bg-darkGreen text-2xl rounded-md py-[6px] tipBtns"
+              class="text-white bg-darkGreen text-2xl rounded-md py-[6px] hover:bg-hoverBtn hover:text-darkGreen focus:bg-blueGreen focus:text-darkGreen tipBtns"
             >
               10%
             </button>
             <button
               value="0.15"
-              class="text-white bg-darkGreen text-2xl rounded-md py-[6px] tipBtns"
+              class="text-white bg-darkGreen text-2xl rounded-md py-[6px] hover:bg-hoverBtn hover:text-darkGreen focus:bg-blueGreen focus:text-darkGreen tipBtns"
             >
               15%
             </button>
             <button
               value="0.25"
-              class="text-white bg-darkGreen text-2xl rounded-md py-[6px] tipBtns"
+              class="text-white bg-darkGreen text-2xl rounded-md py-[6px] hover:bg-hoverBtn hover:text-darkGreen focus:bg-blueGreen focus:text-darkGreen tipBtns"
             >
               25%
             </button>
             <button
               value="0.50"
-              class="text-white bg-darkGreen text-2xl rounded-md py-[6px] tipBtns"
+              class="text-white bg-darkGreen text-2xl rounded-md py-[6px] hover:bg-hoverBtn hover:text-darkGreen focus:bg-blueGreen focus:text-darkGreen tipBtns"
             >
               50%
             </button>
@@ -128,6 +129,7 @@
         </div>
 
         <button
+          id="reset"
           onclick="resetCalculator()"
           class="text-darkGreen bg-blueGreen text-xl text-center rounded-md py-[9px] mb-6"
         >
