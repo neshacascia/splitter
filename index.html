@@ -16,18 +16,20 @@
     <title>splitter</title>
   </head>
 
-  <body class="bg-bgBody font-body flex flex-col items-center xl:mx-[260px]">
-    <div class="flex flex-col py-[50px]">
+  <body
+    class="bg-bgBody font-body h-screen grid place-content-center -mt-8 xl:mx-[260px]"
+  >
+    <div class="flex flex-col items-center py-[50px]">
       <span class="text-title tracking-[0.4em]">SPLI</span>
       <span class="text-title tracking-[0.4em]">TTER</span>
     </div>
 
     <main
-      class="bg-white w-screen h-full flex flex-col gap-8 rounded-t-3xl p-8 md:flex-row md:grow md:w-full md:rounded-3xl max-w-[920px]"
+      class="bg-white w-screen flex flex-col gap-8 rounded-t-3xl p-8 md:flex-row md:grow md:w-full md:rounded-3xl md:gap-10 max-w-[920px]"
     >
       <div class="flex flex-col gap-8 md:w-[50%]">
         <div>
-          <h2 class="text-heading text-base pb-4">Bill</h2>
+          <h2 class="text-heading text-base pb-4 md:pb-2">Bill</h2>
           <div
             class="bg-lightGreen flex justify-between items-center rounded-md"
           >
@@ -45,7 +47,7 @@
         </div>
 
         <div>
-          <h2 class="text-heading text-base pb-4">Select Tip %</h2>
+          <h2 class="text-heading text-base pb-4 md:pb-2">Select Tip %</h2>
           <div class="grid grid-cols-2 gap-4 md:grid-cols-3">
             <button
               value="0.05"
@@ -87,7 +89,7 @@
         </div>
 
         <div>
-          <h2 class="text-heading text-base pb-4">Number of People</h2>
+          <h2 class="text-heading text-base pb-4 md:pb-2">Number of People</h2>
           <div
             class="bg-lightGreen flex justify-between items-center rounded-md"
           >
@@ -112,7 +114,9 @@
               <p class="text-white text-base">Tip Amount</p>
               <span class="text-grayGreen text-[13px]">/ person</span>
             </div>
-            <span id="tipAmount" class="text-blueGreen text-[32px] text-left"
+            <span
+              id="tipAmount"
+              class="text-blueGreen text-[32px] text-left md:text-[48px]"
               >$0.00</span
             >
           </div>
@@ -122,7 +126,9 @@
               <p class="text-white text-base">Total</p>
               <span class="text-grayGreen text-[13px]">/ person</span>
             </div>
-            <span id="total" class="text-blueGreen text-[32px] text-left"
+            <span
+              id="total"
+              class="text-blueGreen text-[32px] text-left md:text-[48px]"
               >$0.00</span
             >
           </div>
