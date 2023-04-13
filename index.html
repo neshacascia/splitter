@@ -4,51 +4,103 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
     <link href="/dist/output.css" rel="stylesheet" />
     <script type="module" src="main.js" defer></script>
     <title>splitter</title>
   </head>
-  <body>
-    <div>
-      <span>SPLI</span>
-      <span>TTER</span>
+  <body class="bg-bgBody font-body flex flex-col items-center">
+    <div class="flex flex-col py-[50px]">
+      <span class="text-title tracking-[0.4em]">SPLI</span>
+      <span class="text-title tracking-[0.4em]">TTER</span>
     </div>
 
-    <main>
-      <h2>Bill</h2>
-      <input type="number" required />
-
-      <h2>Select Tip %</h2>
+    <main
+      class="bg-white w-screen h-full flex flex-col gap-8 rounded-t-3xl p-8"
+    >
       <div>
-        <button>5%</button>
-        <button>10%</button>
-        <button>15%</button>
-        <button>25%</button>
-        <button>50%</button>
-        <button>Custom</button>
+        <h2 class="text-heading text-base pb-4">Bill</h2>
+        <div class="bg-lightGreen flex justify-between items-center rounded-md">
+          <i
+            class="fa-sharp fa-solid fa-dollar-sign text-icon text-xs px-5"
+          ></i>
+          <input
+            type="number"
+            required
+            class="text-darkGreen bg-lightGreen text-2xl text-right w-full py-[6px] px-5"
+          />
+        </div>
       </div>
 
-      <h2>Number of People</h2>
-      <input type="number" required />
+      <div>
+        <h2 class="text-heading text-base pb-4">Select Tip %</h2>
+        <div class="grid grid-cols-2 gap-4">
+          <button class="text-white bg-darkGreen text-2xl rounded-md py-[6px]">
+            5%
+          </button>
+          <button class="text-white bg-darkGreen text-2xl rounded-md py-[6px]">
+            10%
+          </button>
+          <button class="text-white bg-darkGreen text-2xl rounded-md py-[6px]">
+            15%
+          </button>
+          <button class="text-white bg-darkGreen text-2xl rounded-md py-[6px]">
+            25%
+          </button>
+          <button class="text-white bg-darkGreen text-2xl rounded-md py-[6px]">
+            50%
+          </button>
+          <button
+            class="text-custom bg-lightGreen text-2xl rounded-md py-[6px]"
+          >
+            Custom
+          </button>
+        </div>
+      </div>
 
       <div>
-        <div>
+        <h2 class="text-heading text-base pb-4">Number of People</h2>
+        <div class="bg-lightGreen flex justify-between items-center rounded-md">
+          <i class="fa-solid fa-user text-icon text-xs px-5"></i>
+          <input
+            type="number"
+            required
+            class="text-darkGreen bg-lightGreen text-2xl text-right w-full py-[6px] px-5"
+          />
+        </div>
+      </div>
+
+      <div class="bg-darkGreen flex flex-col gap-5 rounded-2xl px-6 pt-8">
+        <div class="flex">
           <div>
-            <p>Tip Amount</p>
-            <span>/ person</span>
+            <p class="text-white text-base">Tip Amount</p>
+            <span class="text-grayGreen text-[13px]">/ person</span>
           </div>
-          <span id="tipAmount"></span>
+          <span
+            id="tipAmount"
+            class="text-blueGreen text-[32px] text-left"
+          ></span>
         </div>
 
-        <div>
+        <div class="flex">
           <div>
-            <p>Total</p>
-            <span>/ person</span>
+            <p class="text-white text-base">Total</p>
+            <span class="text-grayGreen text-[13px]">/ person</span>
           </div>
-          <span id="total"></span>
+          <span id="total" class="text-blueGreen text-[32px] text-left"></span>
         </div>
 
-        <button>RESET</button>
+        <button
+          class="text-darkGreen bg-blueGreen text-xl text-center rounded-md py-[9px] mb-6"
+        >
+          RESET
+        </button>
       </div>
     </main>
   </body>
