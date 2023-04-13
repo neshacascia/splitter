@@ -8,5 +8,48 @@
     <script type="module" src="main.js" defer></script>
     <title>splitter</title>
   </head>
-  <body></body>
+  <body>
+    <div>
+      <span>SPLI</span>
+      <span>TTER</span>
+    </div>
+
+    <main>
+      <h2>Bill</h2>
+      <input type="number" required />
+
+      <h2>Select Tip %</h2>
+      <div>
+        <button>5%</button>
+        <button>10%</button>
+        <button>15%</button>
+        <button>25%</button>
+        <button>50%</button>
+        <button>Custom</button>
+      </div>
+
+      <h2>Number of People</h2>
+      <input type="number" required />
+
+      <div>
+        <div>
+          <div>
+            <p>Tip Amount</p>
+            <span>/ person</span>
+          </div>
+          <span id="tipAmount"></span>
+        </div>
+
+        <div>
+          <div>
+            <p>Total</p>
+            <span>/ person</span>
+          </div>
+          <span id="total"></span>
+        </div>
+
+        <button>RESET</button>
+      </div>
+    </main>
+  </body>
 </html>
