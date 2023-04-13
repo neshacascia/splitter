@@ -786,6 +786,10 @@ video {
   width: 100vw;
 }
 
+.max-w-\[920px\]{
+  max-width: 920px;
+}
+
 .flex-shrink{
   flex-shrink: 1;
 }
@@ -2539,10 +2543,72 @@ video {
   }
 }
 
+@media (min-width: 768px){
+  .md\:mx-\[260px\]{
+    margin-left: 260px;
+    margin-right: 260px;
+  }
+
+  .md\:w-auto{
+    width: auto;
+  }
+
+  .md\:w-\[50\%\]{
+    width: 50%;
+  }
+
+  .md\:w-\[920px\]{
+    width: 920px;
+  }
+
+  .md\:w-full{
+    width: 100%;
+  }
+
+  .md\:grow{
+    flex-grow: 1;
+  }
+
+  .md\:grid-cols-3{
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  .md\:flex-row{
+    flex-direction: row;
+  }
+
+  .md\:justify-between{
+    justify-content: space-between;
+  }
+
+  .md\:rounded-3xl{
+    border-radius: 1.5rem;
+  }
+
+  .md\:px-\[260px\]{
+    padding-left: 260px;
+    padding-right: 260px;
+  }
+}
+
+@media (min-width: 1024px){
+  .lg\:mx-\[260px\]{
+    margin-left: 260px;
+    margin-right: 260px;
+  }
+}
+
 @media (prefers-color-scheme: dark){
   @media (min-width: 1024px){
     .dark\:lg\:hover\:\[paint-order\:markers\]:hover{
       paint-order: markers;
     }
+  }
+}
+
+@media (min-width: 1280px){
+  .xl\:mx-\[260px\]{
+    margin-left: 260px;
+    margin-right: 260px;
   }
 }

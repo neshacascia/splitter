@@ -15,85 +15,106 @@
     <script type="module" src="main.js" defer></script>
     <title>splitter</title>
   </head>
-  <body class="bg-bgBody font-body flex flex-col items-center">
+  <body class="bg-bgBody font-body flex flex-col items-center xl:mx-[260px]">
     <div class="flex flex-col py-[50px]">
       <span class="text-title tracking-[0.4em]">SPLI</span>
       <span class="text-title tracking-[0.4em]">TTER</span>
     </div>
 
     <main
-      class="bg-white w-screen h-full flex flex-col gap-8 rounded-t-3xl p-8"
+      class="bg-white w-screen h-full flex flex-col gap-8 rounded-t-3xl p-8 md:flex-row md:grow md:w-full md:rounded-3xl max-w-[920px]"
     >
-      <div>
-        <h2 class="text-heading text-base pb-4">Bill</h2>
-        <div class="bg-lightGreen flex justify-between items-center rounded-md">
-          <i
-            class="fa-sharp fa-solid fa-dollar-sign text-icon text-xs px-5"
-          ></i>
-          <input
-            type="number"
-            required
-            class="text-darkGreen bg-lightGreen text-2xl text-right w-full py-[6px] px-5"
-          />
-        </div>
-      </div>
-
-      <div>
-        <h2 class="text-heading text-base pb-4">Select Tip %</h2>
-        <div class="grid grid-cols-2 gap-4">
-          <button class="text-white bg-darkGreen text-2xl rounded-md py-[6px]">
-            5%
-          </button>
-          <button class="text-white bg-darkGreen text-2xl rounded-md py-[6px]">
-            10%
-          </button>
-          <button class="text-white bg-darkGreen text-2xl rounded-md py-[6px]">
-            15%
-          </button>
-          <button class="text-white bg-darkGreen text-2xl rounded-md py-[6px]">
-            25%
-          </button>
-          <button class="text-white bg-darkGreen text-2xl rounded-md py-[6px]">
-            50%
-          </button>
-          <button
-            class="text-custom bg-lightGreen text-2xl rounded-md py-[6px]"
+      <div class="flex flex-col gap-8 md:w-[50%]">
+        <div>
+          <h2 class="text-heading text-base pb-4">Bill</h2>
+          <div
+            class="bg-lightGreen flex justify-between items-center rounded-md"
           >
-            Custom
-          </button>
+            <i
+              class="fa-sharp fa-solid fa-dollar-sign text-icon text-xs px-5"
+            ></i>
+            <input
+              type="number"
+              required
+              class="text-darkGreen bg-lightGreen text-2xl text-right w-full py-[6px] px-5"
+            />
+          </div>
+        </div>
+
+        <div>
+          <h2 class="text-heading text-base pb-4">Select Tip %</h2>
+          <div class="grid grid-cols-2 gap-4 md:grid-cols-3">
+            <button
+              class="text-white bg-darkGreen text-2xl rounded-md py-[6px]"
+            >
+              5%
+            </button>
+            <button
+              class="text-white bg-darkGreen text-2xl rounded-md py-[6px]"
+            >
+              10%
+            </button>
+            <button
+              class="text-white bg-darkGreen text-2xl rounded-md py-[6px]"
+            >
+              15%
+            </button>
+            <button
+              class="text-white bg-darkGreen text-2xl rounded-md py-[6px]"
+            >
+              25%
+            </button>
+            <button
+              class="text-white bg-darkGreen text-2xl rounded-md py-[6px]"
+            >
+              50%
+            </button>
+            <button
+              class="text-custom bg-lightGreen text-2xl rounded-md py-[6px]"
+            >
+              Custom
+            </button>
+          </div>
+        </div>
+
+        <div>
+          <h2 class="text-heading text-base pb-4">Number of People</h2>
+          <div
+            class="bg-lightGreen flex justify-between items-center rounded-md"
+          >
+            <i class="fa-solid fa-user text-icon text-xs px-5"></i>
+            <input
+              type="number"
+              required
+              class="text-darkGreen bg-lightGreen text-2xl text-right w-full py-[6px] px-5"
+            />
+          </div>
         </div>
       </div>
 
-      <div>
-        <h2 class="text-heading text-base pb-4">Number of People</h2>
-        <div class="bg-lightGreen flex justify-between items-center rounded-md">
-          <i class="fa-solid fa-user text-icon text-xs px-5"></i>
-          <input
-            type="number"
-            required
-            class="text-darkGreen bg-lightGreen text-2xl text-right w-full py-[6px] px-5"
-          />
-        </div>
-      </div>
-
-      <div class="bg-darkGreen flex flex-col gap-5 rounded-2xl px-6 pt-8">
-        <div class="flex">
-          <div>
-            <p class="text-white text-base">Tip Amount</p>
-            <span class="text-grayGreen text-[13px]">/ person</span>
+      <div
+        class="bg-darkGreen flex flex-col gap-5 rounded-2xl px-6 pt-8 md:w-[50%] md:justify-between"
+      >
+        <div class="flex flex-col gap-5">
+          <div class="flex justify-between items-center">
+            <div>
+              <p class="text-white text-base">Tip Amount</p>
+              <span class="text-grayGreen text-[13px]">/ person</span>
+            </div>
+            <span id="tipAmount" class="text-blueGreen text-[32px] text-left"
+              >$0.00</span
+            >
           </div>
-          <span
-            id="tipAmount"
-            class="text-blueGreen text-[32px] text-left"
-          ></span>
-        </div>
 
-        <div class="flex">
-          <div>
-            <p class="text-white text-base">Total</p>
-            <span class="text-grayGreen text-[13px]">/ person</span>
+          <div class="flex justify-between items-center">
+            <div>
+              <p class="text-white text-base">Total</p>
+              <span class="text-grayGreen text-[13px]">/ person</span>
+            </div>
+            <span id="total" class="text-blueGreen text-[32px] text-left"
+              >$0.00</span
+            >
           </div>
-          <span id="total" class="text-blueGreen text-[32px] text-left"></span>
         </div>
 
         <button
