@@ -4,19 +4,40 @@ let selectedTip;
 let tipAmount;
 let total;
 
-const tipBtns = document.querySelectorAll('.tipBtns');
-tipBtns.forEach(item => item.addEventListener('click', calculateTipAmount));
+document.getElementById('numOfPeople').addEventListener('input', e => {
+  let number = e.target.value;
 
-function calculateTipAmount(e) {
+  if (number === '') {
+    numOfPeople = 1;
+  } else {
+    numOfPeople = number;
+  }
+
+  calculate();
+});
+
+const tipBtns = document.querySelectorAll('.tipBtns');
+tipBtns.forEach(item => item.addEventListener('click', gatherDetails));
+
+function gatherDetails(e) {
   billAmount = Number(document.getElementById('billAmount').value);
-  numOfPeople = Number(document.getElementById('numOfPeople').value);
   selectedTip = Number(e.target.value);
 
-  if (numOfPeople >= 1) {
+  if (selectedTip === 0) {
+    document.getElementById('custom').addEventListener('input', e => {
+      selectedTip = e.target.value / 100;
+      calculate();
+    });
+  } else {
+    calculate();
+  }
+}
+
+function calculate() {
+  if (numOfPeople) {
     tipAmount = (billAmount * selectedTip) / numOfPeople;
     total = billAmount / numOfPeople + tipAmount;
   } else {
-    numOfPeople = 1;
     tipAmount = billAmount * selectedTip;
     total = billAmount + tipAmount;
   }
@@ -32,6 +53,7 @@ function resetCalculator() {
 
   document.getElementById('billAmount').value = '';
   document.getElementById('numOfPeople').value = '';
+  document.getElementById('custom').value = '';
 
   displayAmounts();
 }
