@@ -12,7 +12,7 @@
       referrerpolicy="no-referrer"
     />
     <link href="/dist/output.css" rel="stylesheet" />
-    <script type="module" src="main.js" defer></script>
+    <script src="main.js" async></script>
     <title>splitter</title>
   </head>
   <body class="bg-bgBody font-body flex flex-col items-center xl:mx-[260px]">
@@ -36,6 +36,7 @@
             <input
               type="number"
               required
+              id="billAmount"
               class="text-darkGreen bg-lightGreen text-2xl text-right w-full py-[6px] px-5"
             />
           </div>
@@ -45,32 +46,38 @@
           <h2 class="text-heading text-base pb-4">Select Tip %</h2>
           <div class="grid grid-cols-2 gap-4 md:grid-cols-3">
             <button
-              class="text-white bg-darkGreen text-2xl rounded-md py-[6px]"
+              value="0.05"
+              class="text-white bg-darkGreen text-2xl rounded-md py-[6px] tipBtns"
             >
               5%
             </button>
             <button
-              class="text-white bg-darkGreen text-2xl rounded-md py-[6px]"
+              value="0.10"
+              class="text-white bg-darkGreen text-2xl rounded-md py-[6px] tipBtns"
             >
               10%
             </button>
             <button
-              class="text-white bg-darkGreen text-2xl rounded-md py-[6px]"
+              value="0.15"
+              class="text-white bg-darkGreen text-2xl rounded-md py-[6px] tipBtns"
             >
               15%
             </button>
             <button
-              class="text-white bg-darkGreen text-2xl rounded-md py-[6px]"
+              value="0.25"
+              class="text-white bg-darkGreen text-2xl rounded-md py-[6px] tipBtns"
             >
               25%
             </button>
             <button
-              class="text-white bg-darkGreen text-2xl rounded-md py-[6px]"
+              value="0.50"
+              class="text-white bg-darkGreen text-2xl rounded-md py-[6px] tipBtns"
             >
               50%
             </button>
             <button
-              class="text-custom bg-lightGreen text-2xl rounded-md py-[6px]"
+              value="custom"
+              class="text-custom bg-lightGreen text-2xl rounded-md py-[6px] tipBtns"
             >
               Custom
             </button>
@@ -86,6 +93,8 @@
             <input
               type="number"
               required
+              id="numOfPeople"
+              placeholder="1"
               class="text-darkGreen bg-lightGreen text-2xl text-right w-full py-[6px] px-5"
             />
           </div>
@@ -118,6 +127,7 @@
         </div>
 
         <button
+          onclick="resetCalculator()"
           class="text-darkGreen bg-blueGreen text-xl text-center rounded-md py-[9px] mb-6"
         >
           RESET
