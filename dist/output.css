@@ -2454,6 +2454,18 @@ video {
   content: var(--tw-content);
 }
 
+#custom::-moz-placeholder {
+  color: #547878;
+  text-align: center;
+  width: 100%;
+}
+
+#custom::placeholder {
+  color: #547878;
+  text-align: center;
+  width: 100%;
+}
+
 #numOfPeople::-moz-placeholder {
   color: #9ebbbd;
 }

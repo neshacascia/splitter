@@ -4,6 +4,12 @@
 @tailwind components;
 @tailwind utilities;
 
+#custom::placeholder {
+  color: #547878;
+  text-align: center;
+  width: 100%;
+}
+
 #numOfPeople::placeholder {
   color: #9ebbbd;
 }
