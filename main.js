@@ -11,6 +11,8 @@ if (!tipAmount && !total) {
   resetBtn.setAttribute('disabled', true);
 }
 
+resetBtn.addEventListener('click', resetCalculator);
+
 document.getElementById('numOfPeople').addEventListener('input', e => {
   let number = e.target.value;
 
